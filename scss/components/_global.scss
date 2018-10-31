@@ -285,7 +285,7 @@ video.responsive-video {
 		height: 100%;
 		padding: $common-spacing-indent;
 		@media #{$small-and-down} {
-			padding: $common-spacing-indent /2;
+			padding: $common-spacing-indent /3;
 		}
 		.parallax-content__inner {
 			text-align: center;
@@ -439,7 +439,7 @@ ul.staggered-list li {
 
 	a {
 		color: $text-color;
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 		&:hover {
 			color: $primary-color-dark;
 		}

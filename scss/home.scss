@@ -25,18 +25,18 @@
 	}
 	.hero-slider__item-title {
 		color: #fff;
-		font-size: 7rem;
+		font-size: 6rem;
 		font-family: $font-secondary;
 		font-weight: 500;
 		@media #{$small-and-down} {
-			font-size: 2.5rem;
+			font-size: 2.3rem;
 		}
 	}
 	.hero-slider__item-button {
 		margin-top: $common-spacing-indent;
 
 		@media #{$small-and-down} {
-			margin-top: $common-spacing-indent/3.5;
+			margin-top: $common-spacing-indent/4;
 		}
 
 	}
@@ -329,6 +329,7 @@
 	.slick-slide {
 		margin: 2.5rem;
 		@extend .z-depth-1-half;
+		object-fit: cover;
 		width: 25rem;
 		height: 25rem;
 		@media #{$small-and-down} {
