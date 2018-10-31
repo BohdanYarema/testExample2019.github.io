@@ -977,7 +977,7 @@ td, th {
 ._custom-space {
 	padding: $common-spacing-indent 0;
 	@media #{$small-and-down} {
-		padding: $common-spacing-indent /2 0;
+		padding: $common-spacing-indent /1.5 0;
 	}
 }
 
@@ -988,7 +988,7 @@ td, th {
 ._custom-space-lg {
 	padding: $common-spacing-indent*1.8 0;
 	@media #{$small-and-down} {
-		padding: $common-spacing-indent /2 0;
+		padding: $common-spacing-indent /1.5 0;
 	}
 }
 
@@ -998,7 +998,6 @@ td, th {
 		margin-right: 0;
 	}
 }
-
 ._custom-l-space {
 	margin-left: $common-spacing-indent;
 	@media #{$small-and-down} {
@@ -1033,7 +1032,7 @@ td, th {
 
 ._leaf-bg {
 	background: url("/images/section-bg2.jpg") no-repeat 25% 0;
-	background-size: contain;
+	background-size: cover;
 	@media #{$small-and-down} {
 		background: none;
 	}

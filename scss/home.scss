@@ -237,7 +237,13 @@
 	
 	.slider-half__inner-images { margin-bottom: -30px}
 
-	.slider-img-wrap { max-height: 35rem; }
+	.slider-img-wrap { height: 35rem;
+
+		img{
+			object-fit: cover;
+		}
+
+	}
 
 	.slick-list {
 		@extend .z-depth-2;
@@ -328,6 +334,7 @@
 
 .gallery-slider{
 	/* the slides */
+
 	.slick-slide {
 		margin: 2.5rem;
 		@extend .z-depth-1-half;
@@ -350,7 +357,6 @@
 
 // Map
 // ==========================================================================
-
 #map { 
 	height: 50rem; 
 	width: 100%; 
@@ -361,27 +367,29 @@
 
 }
 
-// Scrolltop ==========================================================================
+// Scroll top
+//==========================================================================
+
 
 .scrollTop {
 	display: none;
 	width: 100%;
 	margin: 0 auto;
 	position: fixed;
-	bottom: 20px;
-	right: 10px;
+	bottom: 2rem;
+	right: 2rem;
 	z-index: 11;
 }
 
 .scroll-btn {
 	position: absolute;
 	right: 2rem;
-	bottom: 3.5rem;
+	bottom: 2rem;
 	width: 4rem;
 	height: 4rem;
 	display: inline-block;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: fill 0.2s;
 	fill: $primary-color-light;
 
 	&:hover {
