@@ -1,0 +1,388 @@
+@import "_core";
+
+.hero {
+	position: relative;
+
+	.hero-slider {
+		.slick-list {
+			@extend .z-depth-2;
+		}
+	}
+	.hero-slider__item-img {
+		width: 100%;
+
+	}
+
+	.hero-slider__item-content-wrap {
+		position: relative;
+	}
+	.hero-slider__item-content {
+		position: absolute;
+		top: 50%;
+		left: 5%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+	.hero-slider__item-title {
+		color: #fff;
+		font-size: 7rem;
+		font-family: $font-secondary;
+		font-weight: 500;
+		@media #{$small-and-down} {
+			font-size: 2.5rem;
+		}
+	}
+	.hero-slider__item-button {
+		margin-top: $common-spacing-indent;
+
+		@media #{$small-and-down} {
+			margin-top: $common-spacing-indent/3.5;
+		}
+
+	}
+
+}
+
+.list {
+	position: relative;
+
+	&:before {
+		content: '';
+		background: url("/images/leaf4.png") no-repeat;
+		background-size: contain;
+		width: 100%;
+		max-width: 60rem;
+		height: 100%;
+		position: absolute;
+		left: -25%;
+		bottom: -5%;
+		@media #{$small-and-down} {
+			display: none;
+		}
+	}
+	@media #{$small-and-down} {
+		.main-title {
+			margin-bottom: 0;
+		}
+		.main-text {
+			margin-top: 0;
+		}
+	}
+
+	.list__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 2.5rem;
+		margin-top: $common-spacing-indent;
+		@media #{$small-and-down} {
+			margin-top: 0;
+			grid-template-columns: repeat(2, 1fr);
+
+		}
+	}
+
+	.inner-item {
+		position: relative;
+
+		@extend .z-depth-2;
+
+		.item-image {
+			display: flex;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+
+		}
+
+		&:hover {
+			.item-content {
+				opacity: 1;
+			}
+		}
+		.item-content {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 2rem;
+			background-color: rgba(255, 255, 255, .75);
+			opacity: 0;
+			text-align: center;
+			box-sizing: border-box;
+			transition: opacity .4s ease;
+		}
+
+	}
+}
+
+.presentation {
+	position: relative;
+	overflow: hidden;
+
+	.presentation-overlay-title {
+		position: absolute;
+		top: 0;
+		font-family: $font-secondary;
+		color: rgba(239, 214, 193, .3);
+		font-size: 18rem;
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: 0;
+		white-space: nowrap;
+		z-index: -1;
+		&._overlay-title-left {
+			left: 0;
+		}
+		
+		&._overlay-title-right {
+			right: 0;
+		}
+		@media #{$small-and-down} {
+			display: none;
+		}
+	}
+
+	.presentation__inner {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: $common-spacing-indent;
+		justify-content: center;
+
+		@media #{$small-and-down} {
+			grid-auto-flow: row;
+			grid-gap: $common-spacing-indent/2;
+		}
+
+		&._reversed {
+			.presentation__image{
+				order: 2;
+			}
+		}
+	}
+
+	.presentation__image {
+		position: relative;
+		@extend .z-depth-2;
+	}
+
+	.presentation__content {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: $common-spacing-indent 0 0 0;
+		@media #{$small-and-down} {
+			margin: 0;
+		}
+
+		.presentation__content-leaf-wrap {
+			position: absolute;
+			bottom: -10rem;
+		
+			@media #{$small-and-down} {
+				display: none;
+			}
+			&._right-leaf {
+				right: -5rem;
+			}
+			&._left-leaf {
+				left: -5rem;
+			}
+			.presentation__content-leaf{
+				max-width: 15rem;
+				@media #{$medium-and-down} {
+					max-width: 10rem;
+				}
+			}
+		}
+	}
+
+}
+
+.presentation-leaf-wrap{
+	position: absolute;
+	
+	@media #{$small-and-down} {
+		display: none;
+	}
+	&._top-leaf{
+		top: 0;
+	}
+	&._bottom-leaf{
+		bottom: 1rem;
+	}
+	&._right-leaf {
+		right: 0;
+	}
+	&._left-leaf {
+		left: 0
+	}
+	.presentation-leaf{
+		position: relative;
+		max-width: 15rem;
+		@media #{$medium-and-down} {
+			max-width: 10rem;
+		}
+	}
+}
+
+
+.slider-half { position: relative;
+
+	.slider-img-wrap { max-height: 35rem; }
+
+	.slick-list {
+		@extend .z-depth-2;
+	}
+}
+
+.presentation__list {
+	position: relative;
+	margin-top: $common-spacing-indent*2;
+	counter-reset: list;
+
+	@media #{$small-and-down} {
+		margin-top: 0;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -18rem;
+		left: 10%;
+		width: 35rem;
+		height: 25rem;
+		background: url("/images/leaf3.png") no-repeat 100%;
+		background-size: cover;
+		z-index: 10;
+
+		@media #{$small-and-down} {
+			display: none;
+		}
+	}
+
+	.presentation__list-item {
+		position: relative;
+		padding: 0 3rem 0 10rem;
+
+		@media #{$small-and-down} {
+			margin-bottom: 2rem;
+		}
+
+		&:before {
+			position: absolute;
+			counter-increment: list;
+			content: counter(list);
+			top: -35%;
+			left: 0;
+			font-family: $font-secondary;
+			font-size: 22rem;
+			line-height: 0;
+			font-weight: 500;
+			color: #f5e7db;
+			@media #{$small-and-down} {
+				top: 0;
+			}
+		}
+
+	}
+}
+
+.divider-content {
+
+	text-align: center;
+	background: $main-color-lighten;
+
+	&._white {
+		background: $white;
+	}
+
+	.divider-content__inner {
+		padding: $common-spacing-indent * 1.5 0;
+		@media #{$small-and-down} {
+			padding: $common-spacing-indent / 2;
+		}
+
+		&._overlayed {
+			padding: $common-spacing-indent 0 $common-spacing-indent*2 0;
+		}
+
+		.main-title {
+			margin: 0;
+		}
+
+		.main-text {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.gallery-slider{
+	/* the slides */
+	.slick-slide {
+		margin: 2.5rem;
+		@extend .z-depth-1-half;
+		width: 25rem;
+		height: 25rem;
+		@media #{$small-and-down} {
+			margin: 0;
+		}
+	}
+	/* the parent */
+	.slick-list {
+		margin: 0 -2.5rem;
+		@media #{$small-and-down} {
+			margin: 2.5rem 0;
+		}
+	}
+	
+}
+
+// Map
+// ==========================================================================
+
+#map { 
+	height: 50rem; 
+	width: 100%; 
+	margin: 1rem 0; 
+	@extend ._has_shadow;
+	border: 2rem solid $white;
+	border-radius: 2px;
+
+}
+
+// Scrolltop ==========================================================================
+
+.scrollTop {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	z-index: 11;
+}
+
+.scroll-btn {
+	position: absolute;
+	right: 2rem;
+	bottom: 3.5rem;
+	width: 4rem;
+	height: 4rem;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.3s;
+	fill: $primary-color-light;
+
+	&:hover {
+		fill: darken($primary-color-light, 10%);
+	}
+
+}

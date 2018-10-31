@@ -1,0 +1,145 @@
+// shared styles
+.btn,
+.btn-flat {
+	display: inline-block;
+	line-height: normal;
+	padding: $button-padding;
+	text-transform: uppercase;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+	position: relative;
+	width: auto;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1rem;
+	overflow: visible;
+	letter-spacing: .25rem;
+	outline: 0;
+	text-decoration: none;
+	color: $white;
+	background-color: $primary-color;
+	border: 1px solid transparent;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	@media #{$small-and-down} {
+		padding: 1rem 2rem;
+
+	}
+
+
+	&._sm {
+
+		padding: 1rem 2rem;
+		font-size: .9rem;
+		letter-spacing: .2rem;
+		line-height: normal;
+	}
+
+	&:hover {
+		background: $white;
+		color: $primary-color;
+		border-color: $primary-color-dark;
+	}
+
+	&._white {
+		background-color: $white;
+		color: $primary-color;
+		border-color: transparent;
+		&:hover {
+			color: $white;
+			background-color: transparent;
+			border-color: $white;
+		}
+	}
+
+	&._outline {
+		background: transparent;
+		color: $primary-color;
+		border: 0;
+		position: relative;
+		
+		&._outline-white{
+			color: $white;
+			.outline-slide {
+				background-color: $white;
+			}
+		}
+		
+		.outline-slide {
+			position: absolute;
+			background-color: $primary-color;
+			-webkit-transition: width 1s ease;
+			-moz-transition: width 1s ease;
+			transition: width 1s ease;
+			
+
+			&.outline-slide_left-right {
+				top: 0;
+				height: 100%;
+				width: 1px;
+
+				&._outline-slide_left {
+					left: 0;
+				}
+
+				&._outline-slide_right {
+					right: 0;
+				}
+			}
+
+			&.outline-slide_top-bottom {
+				height: 1px;
+
+				&._outline-slide-top {
+					top: -1px;
+				}
+				&._outline-slide-bottom {
+					bottom: -1px;
+				}
+
+				&._outline-slide-top-right {
+					right: 0;
+					width: 10%;
+				}
+				&._outline-slide-top-left {
+					left: 0;
+					width: 76%;
+				}
+
+				&._outline-slide-bottom-left {
+					left: 0;
+					width: 10%;
+				}
+				&._outline-slide-bottom-right {
+					right: 0;
+					width: 76%;
+				}
+
+			}
+		}
+		
+		&:hover {
+			.outline-slide {
+				&.outline-slide_top-bottom {
+
+					&._outline-slide-top-right {
+						width: 76%;
+					}
+					&._outline-slide-top-left {
+						width: 10%;
+					}
+
+					&._outline-slide-bottom-left {
+						width: 76%;
+					}
+					&._outline-slide-bottom-right {
+						width: 10%;
+					}
+				}
+			}
+		}
+	}
+}
+
