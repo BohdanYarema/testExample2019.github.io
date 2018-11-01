@@ -210,46 +210,6 @@ function initMap() {
 	});
 }
 
-//
-// // When the DOM is ready
-// $(function() {
-//
-// 	// Init ScrollMagic Controller
-// 	var scrollMagicController = new ScrollMagic();
-//
-// 	// Create Animation for 0.5s
-// 	var tween = TweenMax.to('#animation', 0.5, {
-// 		backgroundColor: 'rgb(255, 39, 46)',
-// 		scale: 5,
-// 		rotation: 360
-// 	});
-//
-// 	// Create the Scene and trigger when visible
-// 	var scene = new ScrollScene({
-// 		triggerElement: '#scene',
-// 		offset: 150 /* offset the trigger 150px below #scene's top */
-// 	})
-// 		.setTween(tween)
-// 		.addTo(scrollMagicController);
-//
-// 	// Add debug indicators fixed on right side
-// 	scene.addIndicators();
-//
-// 	var controller = new ScrollMagic.Controller();
-//
-// 	var fadein_tween = TweenMax.fromTo('.section-subtitle', 1, { yPercent:100 , opacity:0.2 , ease:Power1.easeInOut  }, { yPercent:0 , opacity:1 , ease:Power1.easeInOut  });
-//
-// 	var scene = new ScrollMagic.Scene({
-// 		triggerElement: "#inside",
-// 		trigerHook:"onEnter",
-// 		duration: "50%"
-// 	})
-// 		.setTween(fadein_tween)
-// 		.addTo(controller);
-//
-// });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, {
@@ -257,3 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
         hoverEnabled: false
     });
 });
+var wow = new WOW(
+    {
+        mobile:       false
+    }
+);
+wow.init();

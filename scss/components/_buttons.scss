@@ -264,6 +264,9 @@ button.btn-floating {
 		margin: 0;
 		visibility: hidden;
 		transform: translate(-50%);
+		@media #{$small-and-down} {
+			width: 20rem;
+		}
 		li {
 
 			margin-bottom: 15px;
@@ -271,6 +274,9 @@ button.btn-floating {
 			width: 10rem;
 			border-radius: 2px;
 			transition: background-color .2s ease;
+			@media #{$small-and-down} {
+				width: 16rem;
+			}
 			&:hover{
 				background-color: #a1ca5a;
 			}
@@ -280,6 +286,9 @@ button.btn-floating {
 				padding: 1rem;
 				position: relative;
 				display: block;
+				@media #{$small-and-down} {
+					font-size: 1.6rem;
+				}
 			}
 		}
 		a.btn-floating {
