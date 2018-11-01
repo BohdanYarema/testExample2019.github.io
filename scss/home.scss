@@ -113,12 +113,18 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding: 2rem;
-			background-color: rgba(255, 255, 255, .75);
+			padding: 1rem;
+			background-color: rgba(0, 0, 0, .6);
 			opacity: 0;
 			text-align: center;
 			box-sizing: border-box;
 			transition: opacity .4s ease;
+
+			.main-text {
+				padding: 1rem;
+
+				color: $white;
+			}
 		}
 
 	}
@@ -314,7 +320,7 @@
 	}
 
 	.divider-content__inner {
-		padding: $common-spacing-indent * 1.5 0;
+		padding: $common-spacing-indent * 1 0;
 		@media #{$small-and-down} {
 			padding: $common-spacing-indent / 2;
 		}

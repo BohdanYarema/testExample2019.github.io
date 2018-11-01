@@ -280,7 +280,7 @@ video.responsive-video {
 	}
 
 	.parallax-content {
-		background: rgba(0,0,0, 0.05);
+		background: rgba(250, 243, 237, 0.8);
 		width: 100%;
 		height: 100%;
 		padding: $common-spacing-indent;
@@ -406,18 +406,6 @@ ul.staggered-list li {
 	font-size: 1.5rem;
 	position: relative;
 
-	&:before {
-		content: '';
-		background: url("/images/flowers.png") no-repeat;
-		background-size: contain;
-		width: 20rem;
-		height: 15rem;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-
-	}
-
 	.page-footer-title {
 		font-family: $font-secondary;
 		color: $primary-color;
@@ -438,8 +426,9 @@ ul.staggered-list li {
 	}
 
 	a {
-		color: $text-color;
+		color: $lighten-text-color;
 		font-size: 1.4rem;
+		fill:$lighten-text-color;
 		&:hover {
 			color: $primary-color-dark;
 		}
@@ -453,6 +442,7 @@ ul.staggered-list li {
 		justify-content: space-between;
 		padding: .5rem 0;
 		font-size: 1.2rem;
+		color: $lighten-text-color;
 	}
 }
 
@@ -1114,6 +1104,7 @@ td, th {
 	height: 3rem;
 	width: 3rem;
 	margin-right: 1rem;
+
 
 	img {
 		width: 3rem;
