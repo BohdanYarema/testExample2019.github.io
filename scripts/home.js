@@ -23,7 +23,7 @@ $(document).ready(function () {
 		arrows: false,
 		dots: false,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 2500,
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -52,7 +52,7 @@ $(document).ready(function () {
 		fade: true,
 		cssEase: 'linear',
 		autoplay: true,
-		autoplaySpeed: 5000
+		autoplaySpeed: 2500
 
 	});
 
@@ -188,7 +188,7 @@ $('.js-tilt').tilt({
 function initMap() {
 	var iconBase = {
 		url: '/images/slider-dots.svg',
-		scaledSize: new google.maps.Size(40, 40), // size
+		scaledSize: new google.maps.Size(50, 50), // size
 	}
 	var uluru = {lat: 50.527241, lng: 30.600207};
 	var map = new google.maps.Map(document.getElementById('map'), {
