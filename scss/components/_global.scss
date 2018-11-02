@@ -577,6 +577,7 @@ td, th {
 .collection-quote{
 	font-size: 1.4rem;
 	color: $lighten-text-color;
+	padding: 1rem 0;
 	&:before{
 		content:' * ';
 	}
