@@ -574,6 +574,14 @@ td, th {
 
 }
 
+.collection-quote{
+	font-size: 1.4rem;
+	color: $lighten-text-color;
+	&:before{
+		content:' * ';
+	}
+}
+
 // Collections
 .collection {
 	margin: $element-top-margin 0 $element-bottom-margin 0;
@@ -584,6 +592,7 @@ td, th {
 	&.services-and-prices-collection {
 		border: none;
 	}
+
 
 	.collection-item {
 		line-height: $collection-line-height;
@@ -613,10 +622,12 @@ td, th {
 			margin-bottom: 1rem;
 			font-size: 3rem;
 
-			&:before {
+			span { font-size: 2rem; margin-right: .5rem}
+
+			&:after {
 				content: '₴';
-				margin-right: .5rem;
-				font-size: 2rem;
+				margin-left: .5rem;
+				font-size: 2.5rem;
 				color: $primary-color;
 
 			}

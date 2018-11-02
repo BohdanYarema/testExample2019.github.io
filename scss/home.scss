@@ -58,17 +58,16 @@
 
 .list {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		content: '';
-		background: url("/images/leaf4.png") no-repeat;
+		background: url("/images/vertical-menu-background-img.jpg") no-repeat;
 		background-size: contain;
 		width: 100%;
-		max-width: 60rem;
 		height: 100%;
 		position: absolute;
-		left: -25%;
-		bottom: -5%;
+		left: 0;
 		@media #{$small-and-down} {
 			display: none;
 		}
@@ -269,7 +268,6 @@
 
 
 .slider-half { position: relative;
-
 
 	.slider-img-wrap { height: 35rem;
 
