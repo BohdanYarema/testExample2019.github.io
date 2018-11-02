@@ -977,6 +977,9 @@ td, th {
 
 ._custom-space-lg {
 	padding: $common-spacing-indent*1.8 0;
+	@media #{$medium-and-down} {
+		padding: $common-spacing-indent /1 0;
+	}
 	@media #{$small-and-down} {
 		padding: $common-spacing-indent /1.5 0;
 	}
@@ -990,28 +993,28 @@ td, th {
 }
 ._custom-l-space {
 	margin-left: $common-spacing-indent;
-	@media #{$small-and-down} {
+	@media #{$medium-and-down} {
 		margin-left: 0;
 	}
 }
 
 ._custom-top-space {
 	margin-top: $common-spacing-indent;
-	@media #{$small-and-down} {
+	@media #{$medium-and-down} {
 		margin-top: 0;
 	}
 }
 
 ._custom-top-space-lg {
 	margin-top: $common-spacing-indent*3;
-	@media #{$small-and-down} {
+	@media #{$medium-and-down} {
 		margin-top: 0;
 	}
 }
 
 ._custom-top-space-sm {
 	margin-top: $common-spacing-indent / 2;
-	@media #{$small-and-down} {
+	@media #{$medium-and-down} {
 		margin-top: 0;
 	}
 }
