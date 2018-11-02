@@ -121,6 +121,9 @@
 			text-align: center;
 			box-sizing: border-box;
 			transition: opacity .4s ease;
+			@media #{$small-and-down} {
+				opacity: 1;
+			}
 
 			.main-text {
 				padding: 1rem;
@@ -379,6 +382,9 @@
 	@extend ._has_shadow;
 	border: 2rem solid $white;
 	border-radius: 2px;
+	@media #{$small-and-down} {
+		border: none;
+	}
 
 }
 
