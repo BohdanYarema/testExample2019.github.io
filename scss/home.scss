@@ -173,8 +173,8 @@
 		grid-auto-flow: column;
 		grid-gap: $common-spacing-indent;
 		justify-content: center;
-
-		@media #{$small-and-down} {
+		
+		@media #{$medium-and-down} {
 			grid-auto-flow: row;
 			grid-gap: $common-spacing-indent/2;
 		}
@@ -189,6 +189,9 @@
 	.presentation__image {
 		position: relative;
 		@extend .z-depth-2;
+		img{
+			object-fit: cover;
+		}
 	}
 
 	.presentation__content {
@@ -196,7 +199,7 @@
 		flex-direction: column;
 		position: relative;
 		margin: $common-spacing-indent 0 0 0;
-		@media #{$small-and-down} {
+		@media #{$medium-and-down} {
 			margin: 0;
 		}
 
@@ -417,4 +420,8 @@
 		fill: darken($primary-color-light, 10%);
 	}
 
+}
+
+.row{
+	
 }

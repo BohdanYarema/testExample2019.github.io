@@ -16,7 +16,7 @@ $(document).ready(function () {
 	});
 
 
-	$('.divider-content__slider, .gallery_inner-slider').not('.slick-initialized').slick({
+	$('.gallery_inner-slider').not('.slick-initialized').slick({
 		slidesToShow: 5,
 		slidesToScroll: 5,
 		infinite: true,
@@ -32,12 +32,30 @@ $(document).ready(function () {
 					slidesToScroll: 3
 				}
 			},
-			
+
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1
+				}
+			},
+		]
+	});
+	$('.divider-content__slider').not('.slick-initialized').slick({
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		infinite: true,
+		arrows: false,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 2500,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
 				}
 			},
 		]
@@ -172,9 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 	var elems = document.querySelectorAll('.dropdown-trigger');
-	options = {
-		
-	}
+	options = {}
 	var instances = M.Dropdown.init(elems, options);
 });
 
@@ -195,7 +211,7 @@ function initMap() {
 		zoom: 16,
 		center: uluru
 	});
-	
+
 	var marker = new google.maps.Marker({
 		position: uluru,
 		map: map,
@@ -205,21 +221,39 @@ function initMap() {
 	var iw = new google.maps.InfoWindow({
 		content: "г.Киев ул. Радунская 5А"
 	});
-	google.maps.event.addListener(marker, "click", function(e) {
+	google.maps.event.addListener(marker, "click", function (e) {
 		iw.open(map, this);
 	});
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-        direction: 'top',
-        hoverEnabled: false
-    });
+document.addEventListener('DOMContentLoaded', function () {
+	var elems = document.querySelectorAll('.fixed-action-btn');
+	var instances = M.FloatingActionButton.init(elems, {
+		direction: 'top',
+		hoverEnabled: false
+	});
 });
 var wow = new WOW(
-    {
-        mobile:       false
-    }
+	{
+		mobile: false
+	}
 );
 wow.init();
+
+
+$(window).load(function () {
+	/* Preload code goes here */
+	function preload(imageArray, index) {
+		index = index || 0;
+		if (imageArray && imageArray.length > index) {
+			var img = new Image();
+			img.onload = function () {
+				preload(imageArray, index + 1);
+			}
+			img.src = images[index]['/images/']
+			;
+		}
+		/* images is an array with image metadata */
+		preload(images);
+	}
+});
