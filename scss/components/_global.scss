@@ -605,6 +605,10 @@ td, th {
 		align-items: center;
 		margin: 0;
 		font-size: 2rem;
+		@media #{$small-and-down} {
+			font-size: 1.6rem;
+		}
+		
 
 		.collection-item-dots {
 			width: 95%;
@@ -623,13 +627,26 @@ td, th {
 			margin-bottom: 1rem;
 			font-size: 3rem;
 
-			span { font-size: 2rem; margin-right: .5rem}
+			@media #{$small-and-down} {
+				font-size: 2.5rem;
+			}
+
+			span { font-size: 2rem; margin-right: .5rem;
+
+				@media #{$small-and-down} {
+					font-size: 1.5rem;
+				}
+			
+			}
 
 			&:after {
 				content: '₴';
 				margin-left: .5rem;
 				font-size: 2.5rem;
 				color: $primary-color;
+				@media #{$small-and-down} {
+					font-size: 1.5rem;
+				}
 
 			}
 

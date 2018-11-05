@@ -135,6 +135,7 @@
 			transition: opacity .4s ease;
 			@media #{$small-and-down} {
 				opacity: 1;
+				background-color: rgba(0, 0, 0, .4);
 			}
 
 			.main-text {
@@ -271,6 +272,10 @@
 
 	.slider-img-wrap { height: 35rem;
 
+		@media #{$medium-and-down} {
+			height: 20rem;
+		}
+
 		img{
 			object-fit: cover;
 		}
@@ -330,7 +335,7 @@
 				top: 0;
 			}
 		}
-
+		
 	}
 }
 

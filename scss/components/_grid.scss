@@ -2,7 +2,12 @@
   margin: 0 auto;
   max-width: 2000px;
   width: 90%;
-	
+
+	@media #{$small-and-down} {
+		width: 95%;
+	}
+
+
 	&._md {
 		max-width: 1400px;
 	}

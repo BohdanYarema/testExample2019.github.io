@@ -105,6 +105,10 @@
 	padding: 2rem;
 	color: $lighten-text-color;
 	font-size: 1.4rem;
+	@media #{$small-and-down} {
+		padding: 1rem;
+	}
+	
 }
 
 // Sidenav collapsible styling
