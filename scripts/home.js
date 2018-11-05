@@ -19,7 +19,7 @@ $(document).ready(function () {
 	$('.gallery_inner-slider').not('.slick-initialized').slick({
 		slidesToShow: 5,
 		slidesToScroll: 5,
-		infinite: true,
+		infinite: false,
 		arrows: false,
 		dots: false,
 		autoplay: true,
