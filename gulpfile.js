@@ -11,7 +11,9 @@ var gulp = require('gulp'),
     del = require('del'),
     jshint = require('gulp-jshint'),
     scsslint = require('gulp-scss-lint'),
-    browser = require('browser-sync').create();
+    browser = require('browser-sync').create(),
+	imagemin = require('gulp-imagemin'),
+	assetCache = require('gulp-asset-cache');
 
 
 
@@ -52,6 +54,16 @@ gulp.task('clean', function (cb) {
 
 });
 
+gulp.task('images', function() {
+	return gulp.src('./images/*.{jpg,png,jpeg,gif,svg}')
+	// Specify the location and name of the cache file
+		.pipe(assetCache.filter('./images/.image-cache'))
+		.pipe(imagemin({
+			verbose: true
+		}))
+		.pipe(gulp.dest('./images/'))
+		.pipe(assetCache.cache());
+});
 
 
 gulp.task('sassDev', function () {
@@ -204,7 +216,7 @@ gulp.task('scssLint', function () {
 
 // Default task
 
-gulp.task('default', ['clean', 'jsMinDev', 'sassDev', 'watch']);
+gulp.task('default', ['clean', 'jsMinDev', 'sassDev', 'watch','images']);
 
 
 
