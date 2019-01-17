@@ -50,6 +50,9 @@
 		font-family: $font-secondary;
 		font-weight: 500;
 		margin: 0;
+		@media #{$medium-and-down} {
+			font-size: 4rem;
+		}
 		@media #{$small-and-down} {
 			font-size: 2.3rem;
 		}
@@ -426,20 +429,24 @@
     }
 		.map-contacts-wrap {
 			position: absolute;
-			bottom: 0;
+			bottom: 2rem;
             display: flex;
+			border-radius: 2px;
+			flex-direction: column;
             width: 100%;
-			left: 0;
-			padding: .6rem;
+			max-width: 250px;
+			@extend .z-depth-1-half;
+			left: 2rem;
+			padding: 2rem;
             justify-content: center;
 			background: #fff;
             a{
-              margin: 0 1rem;
+              margin: 1rem 0;
               font-size: 1.6rem;
-              color: $primary-color-dark;
+              color: $text-color;
             }
 			@media #{$small-and-down} {
-				display: none;
+				width: 100%;
 			}
 		}
 
