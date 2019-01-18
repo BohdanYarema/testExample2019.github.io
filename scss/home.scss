@@ -18,11 +18,14 @@
 	.hero-slider__item-content-wrap {
 		position: relative;
 		height: 45rem;
+		@media #{$large-and-up} {
+			height: 50rem;
+		}
 		@media #{$medium-and-down} {
-			height: 30rem;
+			height: 40rem;
 		}
 		@media #{$small-and-down} {
-			height: 20rem;
+			height: 25rem;
 		}
 	}
 	.hero-slider__item-content {
@@ -430,18 +433,16 @@
 		.map-contacts-wrap {
 			position: absolute;
 			bottom: 2rem;
-            display: flex;
+            display: inline-flex;
 			border-radius: 2px;
 			flex-direction: column;
-            width: 100%;
-			max-width: 250px;
 			@extend .z-depth-1-half;
 			left: 2rem;
 			padding: 2rem;
             justify-content: center;
 			background: #fff;
             a{
-              margin: 1rem 0;
+              margin: .5rem 0;
               font-size: 1.6rem;
               color: $text-color;
             }

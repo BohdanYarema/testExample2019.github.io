@@ -7,44 +7,23 @@
 
 	.collapsible-item {
 		border-bottom: 1px solid $collapsible-border-color;
-		position: relative;
 		.plus {
-			position: absolute;
-			top: 2rem;
-			right: 1rem;
-			width: 1rem;
-			height: 1rem;
 			z-index: 1;
 			cursor: pointer;
 			opacity: .5;
 			transition: .4s all;
-			&:before, &:after {
-				content: '';
-				width: 2px;
-				height: 100%;
-				background: #7a767a;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				margin-left: -1px;
-			}
-			&:after {
-				height: 2px;
-				width: 100%;
-				left: 0;
-				margin-left: 0;
-				top: 50%;
-				margin-top: -1px;
+			&:before{
+				content: '\02A2F';
+				transform: translateY(-50%);
 			}
 		}
 		&.active {
-			border-color: $primary-color-dark;
 			.plus {
-				transform: rotate(-135deg);
 				opacity: 1;
-				&:before, &:after {
-					background: $primary-color-dark;
+				
+				&:before {
+					content: '\0002B';
+					color: $primary-color-dark;
 				}
 			}
 		}
@@ -74,10 +53,12 @@
 
 	display: flex;
 	cursor: pointer;
+	align-items: center;
+	justify-content: space-between;
 	position: relative;
 	-webkit-tap-highlight-color: transparent;
 	line-height: 1.5;
-	padding: 1rem 5rem 1rem 1rem;
+	padding: 1rem;
 	background-color: transparent;
 	color: $lighten-text-color;
 	font-family: $font-secondary;

@@ -17,8 +17,8 @@ $(document).ready(function () {
 
 
 	$('.gallery_inner-slider').not('.slick-initialized').slick({
-		slidesToShow: 5,
-		slidesToScroll: 5,
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		infinite: false,
 		arrows: false,
 		dots: false,
@@ -35,6 +35,13 @@ $(document).ready(function () {
 
 			{
 				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1
