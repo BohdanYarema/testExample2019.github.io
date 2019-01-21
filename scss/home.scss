@@ -17,16 +17,7 @@
 
 	.hero-slider__item-content-wrap {
 		position: relative;
-		height: 45rem;
-		@media #{$large-and-up} {
-			height: 50rem;
-		}
-		@media #{$medium-and-down} {
-			height: 40rem;
-		}
-		@media #{$small-and-down} {
-			height: 25rem;
-		}
+		height: 100vh;
 	}
 	.hero-slider__item-content {
 		position: absolute;
@@ -447,7 +438,11 @@
               color: $text-color;
             }
 			@media #{$small-and-down} {
-				width: 100%;
+				bottom: 0;
+				left: 0;
+				a{
+					font-size: 1.5rem;
+				}
 			}
 		}
 
