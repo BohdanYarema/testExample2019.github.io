@@ -22,15 +22,13 @@
 		&.active {
 			.plus {
 				opacity: 1;
-				
+				transform: rotate(45deg);
 				&:before {
-					content: '\0002B';
 					color: $primary-color-dark;
 				}
 			}
 		}
 	}
-
 }
 
 .presentation-collapse-img {
